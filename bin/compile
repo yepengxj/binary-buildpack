@@ -3,4 +3,6 @@ wget https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz
 
 tar -xf pdi.tar.gz
 
+rm pdi.tar.gz
+
 exit 0
