@@ -1,7 +1,8 @@
 #! /bin/sh
-wget https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz
+curl https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz -s -o pdi.tar.gz
 
-tar -xf pdi.tar.gz
+mkdir -p /app
+tar -xzf pdi.tar.gz  -C /app
 
 rm pdi.tar.gz
 
