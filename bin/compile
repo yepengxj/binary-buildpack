@@ -1,7 +1,10 @@
 #! /bin/sh
+
+set -e
 curl https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz -s -o pdi.tar.gz
 
 mkdir -p /app
+
 tar -xzf pdi.tar.gz  -C /app
 
 rm pdi.tar.gz
