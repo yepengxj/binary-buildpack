@@ -1,2 +1,8 @@
 #! /bin/sh
+wget https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz
+
+tar -xf pdi.tar.gz
+
+nohup sh carte.sh 0.0.0.0 8080 &
+
 exit 0
