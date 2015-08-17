@@ -7,9 +7,13 @@ wget -q https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz
 
 mkdir -p $PDI_HOME
 
+echo $PDI_HOME
+
 tar -xzf pdi.tar.gz  -C $PDI_HOME
 
 export PATH=$PDI_HOME:$PATH
+
+echo $PATH
 
 ls $PDI_HOME
 
