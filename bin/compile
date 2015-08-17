@@ -1,13 +1,18 @@
 #! /bin/sh
 
 set -e
+BUILD_DIR=$1
+PDI_HOME="$BUILD_DIR/pdi"
 wget -q https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz 
 
-mkdir -p /app
+mkdir -p $PDI_HOME
 
-tar -xzf pdi.tar.gz  -C /app
+tar -xzf pdi.tar.gz  -C $PDI_HOME
 
-ls /app
+export PATH=$PDI_HOME:$PATH
+
+ls $PDI_HOME
+
 rm pdi.tar.gz
 
 exit 0
