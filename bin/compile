@@ -2,7 +2,7 @@
 
 set -e
 BUILD_DIR=$1
-PDI_HOME="/app/pdi"
+PDI_HOME="$BUILD_DIR/pdi"
 wget -q https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz 
 
 mkdir -p $PDI_HOME
@@ -16,5 +16,5 @@ export PATH=$PDI_HOME:$PATH
 echo "PATH:"$PATH
 
 rm pdi.tar.gz
-
+nohup $PDI_HOME/carte.sh 0.0.0.0 8080 &
 exit 0
