@@ -15,6 +15,7 @@ export PATH=$PDI_HOME:$PATH
 
 echo "PATH:"$PATH
 
+env
+
 rm pdi.tar.gz
-nohup $PDI_HOME/carte.sh 0.0.0.0 8080 &
 exit 0
