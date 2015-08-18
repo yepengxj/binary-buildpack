@@ -17,5 +17,8 @@ echo "PATH:"$PATH
 
 env
 
+echo "ls deply*.sh start"
+ls deply*.sh
+echo "ls deply*.sh end"
 rm pdi.tar.gz
 exit 0
