@@ -2,23 +2,14 @@
 
 set -e
 BUILD_DIR=$1
-PDI_HOME="$BUILD_DIR/pdi"
 wget -q https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz 
 
-mkdir -p $PDI_HOME
 
 echo "PDI_HOME:"$PDI_HOME
 
-tar -xzf pdi.tar.gz  -C $PDI_HOME
+tar -xzf pdi.tar.gz  -C $BUILD_DIR
 
-export PATH=$PDI_HOME:$PATH
-
-echo "PATH:"$PATH
 
 env
 
-echo "ls deply*.sh start"
-ls deply*.sh 2>&1
-echo "ls deply*.sh end"
-rm pdi.tar.gz
 exit 0
