@@ -7,6 +7,10 @@ wget -q https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz
 
 echo "BUILD_DIR:"$BUILD_DIR
 
+pwd
+
+ls
+
 compile_buildpack_dir=$(cd $(dirname $0); cd ..; pwd)
 compile_buildpack_bin=$compile_buildpack_dir/bin
 
@@ -14,7 +18,10 @@ compile_buildpack_bin=$compile_buildpack_dir/bin
 tar -xzf pdi.tar.gz  -C $BUILD_DIR
 rm pdi.tar.gz
 
-cp $compile_buildpack_bin/start_carte.sh $BUILD_DIR/
-env
+ls $compile_buildpack_bin/start_carte.sh
+
+cp $compile_buildpack_bin/start_carte.sh $BUILD_DIR/ 2>&1
+
+ls $BUILD_DIR/start_carte.sh
 
 exit 0
