@@ -8,7 +8,7 @@ wget -q https://s3.amazonaws.com/yepeng-pdi/pdi.tar.gz
 echo "PDI_HOME:"$PDI_HOME
 
 tar -xzf pdi.tar.gz  -C $BUILD_DIR
-
+rm pdi.tar.gz
 
 env
 
