@@ -22,6 +22,6 @@ ls $compile_buildpack_bin/start_carte.sh
 
 cp $compile_buildpack_bin/start_carte.sh $BUILD_DIR/ 2>&1
 
-ls $BUILD_DIR/start_carte.sh
+ls $BUILD_DIR/
 
 exit 0
